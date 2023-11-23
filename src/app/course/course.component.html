@@ -1,0 +1,9 @@
+<div>
+  <input type="text" [(ngModel)]="searchText" (keyup)="filterCourses()" placeholder="Buscar curso..." class="search-input">
+  <div class="carousel">
+    <div class="card" *ngFor="let course of filteredCourses">
+      <h3>{{ course.name }}</h3>
+      <p>{{ course.description }}</p>
+    </div>
+  </div>
+</div>
